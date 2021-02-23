@@ -1,30 +1,25 @@
 import React, { useEffect } from 'react'
+import { HashRouter as Router } from 'react-dom'
 import { connect } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+import Home from './Home'
+import Header from './Header'
+import Nav from './Nav'
 
 const App = (props) => {
-  useEffect(() => {
-    props.dispatch(fetchFruits())
-  })
+    useEffect(() => {
+        props.dispatch(fetchFruits())
+    })
 
-  return (
-    <>
-      <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
-      </div>
-    </>
-  )
+    return ( 
+        <div className = "main" >
+            <Router>
+                <Header />
+                <Nav />
+                <div className = "page-content" >
+                    <Route path = '/' exact component = { Home } /> 
+                </div>
+            </Router> 
+        </div>
+    )
 }
-const mapStateToProps = (globalState) => {
-  return {
-    fruits: globalState.fruits
-  }
-}
-
-export default connect(mapStateToProps)(App)
