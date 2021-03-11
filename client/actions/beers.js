@@ -6,3 +6,7 @@ export function getBeers() {
         beers: beers
     }
 }
+
+export function fetchBeers() {
+    
+}
