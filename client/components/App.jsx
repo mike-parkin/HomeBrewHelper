@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import Home from './Home'
 import Header from './Header'
 import Nav from './Nav'
+import BeerList from './BeerList'
 
 const App = (props) => {
    
@@ -15,6 +16,7 @@ const App = (props) => {
                 <Nav />
                 <div className = "page-content" >
                     <Route path = '/' exact component = { Home } /> 
+                    <Route path = '/Beerlist' component = { BeerList } />
                 </div>
             </Router> 
         </div>
