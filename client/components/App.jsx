@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { HashRouter as Router } from 'react-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Home from './Home'
@@ -7,12 +7,9 @@ import Header from './Header'
 import Nav from './Nav'
 
 const App = (props) => {
-    useEffect(() => {
-        props.dispatch(fetchFruits())
-    })
-
+   
     return ( 
-        <div className = "main" >
+        <div className = "app" >
             <Router>
                 <Header />
                 <Nav />
@@ -23,3 +20,5 @@ const App = (props) => {
         </div>
     )
 }
+
+export default connect()(App)
