@@ -10,11 +10,11 @@ import BeerList from './BeerList'
 const App = (props) => {
    
     return ( 
-        <div className = "app" >
+        <div className="app" >
+            <Header />
             <Router>
-                <Header />
-                <Nav />
                 <div className = "page-content" >
+                    <Nav />
                     <Route path = '/' exact component = { Home } /> 
                     <Route path = '/Beerlist' component = { BeerList } />
                 </div>

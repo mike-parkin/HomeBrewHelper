@@ -4,3 +4,16 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+.app {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.page-content {
+  display: flex;
+}
+
+.nav {
+  width: 25%;
+}

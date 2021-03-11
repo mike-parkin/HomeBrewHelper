@@ -5,3 +5,5 @@ const BeerList = () => {
          <h1>I am a list</h1>
      )
 }
+
+export default BeerList
