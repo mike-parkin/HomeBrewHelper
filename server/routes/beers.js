@@ -5,7 +5,6 @@ const db = require('../db/beers')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    console.log('route')
     db.getBeers()
         .then(beers => {
             return res.json(beers)
@@ -23,14 +22,6 @@ router.get('/recipe/:id', (req, res) => {
                             res.json(recipe[0][0])
                         })
                 })
-        })
-})
-
-router.post('/newrecipe', (req, res) => {
-    db.newBeer(req.body)
-        .then(id => {
-            console.log(id)
-            return null
         })
 })
 

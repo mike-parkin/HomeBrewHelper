@@ -2,30 +2,13 @@ const connection = require('./connection')
 
 module.exports = {
     getBeers: getBeers,
-    getGains: getGains,
-    getHops: getHops,
-    getYeasts: getYeasts,
     getRecipeGrains: getRecipeGrains,
     getRecipeHops: getRecipeHops,
     getRecipeYeasts: getRecipeYeasts,
-    addBeer: addBeer
 }
 
 function getBeers(db = connection) {
-    console.log('backend')
     return db('beers').select()
-}
-
-function getGains(db = connection) {
-    return db('grains').select()
-}
-
-function getHops(db = connection) {
-    return db('hops').select()
-}
-
-function getYeasts(db = connection) {
-    return db('yeasts').select()
 }
 
 function getRecipeGrains(beer_id, db = connection) {
@@ -80,9 +63,4 @@ function getRecipeYeasts(recipe, db = connection) {
                     })
             }))
         })
-}
-
-function addBeer(newBeer, db = connection) {
-    return db('beers')
-        .insert(newBeer)
 }
