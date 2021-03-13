@@ -12,6 +12,7 @@ module.exports = {
 }
 
 function getBeers(db = connection) {
+    console.log('backend')
     return db('beers').select()
 }
 

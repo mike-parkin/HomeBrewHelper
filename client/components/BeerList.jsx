@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
+import { fetchBeers } from '../actions/beers'
 
-const BeerList = () => {
-     return (
-         <h1>I am a list</h1>
+const BeerList = (props) => {
+    const beers = props.beers
+    
+    useEffect(() => {
+        fetchBeers()
+    })
+
+    return (
+        <>
+            <h1>here's a list of recipes for ya</h1>
+            <ul>
+                {beers.map(beer => {
+                    return (
+                        <li>{beer.name}</li>
+                    )
+                })}    
+            </ul>
+
+        </>
      )
 }
 
-export default BeerList
+const mapStateToProps = (globalState) => {
+    return {
+        beers: globalState.beers
+    }
+}
+
+export default connect(mapStateToProps)(BeerList)
