@@ -15,8 +15,10 @@ const App = (props) => {
             <Router>
                 <div className = "page-content" >
                     <Nav />
-                    <Route path = '/' exact component = { Home } /> 
-                    <Route path = '/Beerlist' component = { BeerList } />
+                    <div className='main-content'>
+                        <Route path = '/' exact component = { Home } /> 
+                        <Route path = '/Beerlist' component = { BeerList } />
+                    </div>
                 </div>
             </Router> 
         </div>

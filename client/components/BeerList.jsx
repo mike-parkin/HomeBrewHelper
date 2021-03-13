@@ -4,10 +4,10 @@ import { fetchBeers } from '../actions/beers'
 
 const BeerList = (props) => {
     const beers = props.beers
-    
+
     useEffect(() => {
-        fetchBeers()
-    })
+        props.dispatch(fetchBeers())
+    }, [])
 
     return (
         <>
