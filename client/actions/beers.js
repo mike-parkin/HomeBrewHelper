@@ -1,4 +1,4 @@
-import { grabBeers } from '../apis/beers'
+import { getBeers } from '../apis/beers'
 
 
 export const SET_BEERS = 'SET_BEERS'
@@ -11,12 +11,10 @@ export function setBeers(beers) {
 }
 
 export function fetchBeers() {
-    console.log('hello')
     return dispatch => {
-        return grabBeers()
-            .then(res => {
-                console.log("hello again")
-                dispatch(setBeers(res))
+        return getBeers()
+            .then(response => {
+                dispatch(setBeers(response))
                 return null
             })
     }
