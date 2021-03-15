@@ -10,7 +10,6 @@ const baseUrl = 'https://sandbox-api.brewerydb.com/v2/'
 
 
 router.get('/', (req, res) => {
-    console.log('hi')
     request
         .get(baseUrl + 'hops/?key=' + apiKey)
         .then(hops => {

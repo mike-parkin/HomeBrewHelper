@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { connect } from 'react-redux'
 
 import { getHops } from '../apis/hops'
 
@@ -29,4 +30,4 @@ const HopsList = (props) => {
     )
 }
 
-export default HopsList
+export default connect()(HopsList)

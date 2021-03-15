@@ -1,6 +1,5 @@
 import { getBeers } from '../apis/beers'
 
-
 export const SET_BEERS = 'SET_BEERS'
 
 export function setBeers(beers) {
@@ -12,7 +11,6 @@ export function setBeers(beers) {
 
 export function fetchBeers() {
     return dispatch => {
-        console.log('hi')
         return getBeers()
             .then(response => {
                 dispatch(setBeers(response))

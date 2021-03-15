@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { HashRouter as Router, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+import { fetchHops } from '../actions/hops'
+
 import Home from './Home'
 import Header from './Header'
 import Nav from './Nav'
@@ -10,7 +12,11 @@ import Grainslist from './GrainsList'
 import HopsList from './HopsList'
 
 const App = (props) => {
-   
+
+    useEffect(() => {
+        props.dispatch(fetchHops())
+    }, [])
+
     return ( 
         <div className="app" >
             <Header />
@@ -29,4 +35,10 @@ const App = (props) => {
     )
 }
 
-export default connect()(App)
+const mapStateToProps = (globalState) => {
+    return {
+        hops: globalState.hops
+    }
+}
+
+export default connect(mapStateToProps)(App)
