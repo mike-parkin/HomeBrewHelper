@@ -7,6 +7,7 @@ import Header from './Header'
 import Nav from './Nav'
 import BeerList from './BeerList'
 import Grainslist from './GrainsList'
+import HopsList from './HopsList'
 
 const App = (props) => {
    
@@ -17,9 +18,10 @@ const App = (props) => {
                 <div className = "page-content" >
                     <Nav />
                     <div className='main-content'>
-                        <Route path ='/' exact component = { Home } /> 
-                        <Route path ='/Beerlist' component = { BeerList } />
-                        <Route path ='/grainslist' component = { Grainslist } />
+                        <Route path='/' exact component = { Home } /> 
+                        <Route path='/Beerlist' component = { BeerList } />
+                        <Route path='/grainslist' component = { Grainslist } />
+                        <Route path='/hopslist' component= { HopsList } />
                     </div>
                 </div>
             </Router> 

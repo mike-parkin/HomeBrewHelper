@@ -6,8 +6,15 @@ const Nav = () => {
     
     return (
         <div className="nav">
-            <Link to='/beerlist'>Beer Recipes</Link>
-            <Link to='/grainslist'>Grains</Link>
+            <div className='nav-link'>
+                <Link to='/beerlist'>Beer Recipes</Link>
+            </div>
+            <div className='nav-link'>
+                <Link to='/grainslist'>Grains/Fermentables</Link>
+            </div>
+            <div className='nav-link'>
+                <Link to='/hopslist'>Hops</Link>
+            </div>
         </div>
     )
 }
