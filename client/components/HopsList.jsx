@@ -8,6 +8,7 @@ const HopsList = (props) => {
     const fetchHops = () => {
         getHops()
             .then(hops => {
+                console.log(hops)
                 setHops(hops)
             })
     }
@@ -20,9 +21,9 @@ const HopsList = (props) => {
         <>
             <h1>List of hops</h1>
             <ul>
-                {hops.data.map(hop => {
+                {/* {hops.data.map(hop => {
                     <li>{hop.name}</li>
-                })}
+                })} */}
             </ul>
         </>
     )
