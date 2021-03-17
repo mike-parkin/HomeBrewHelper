@@ -1,29 +1,19 @@
-# Fullstack boilerplate
+# Home Brewing Recipe website
 
-## Getting Started
+## Aim
+* A simple website where users can view all-grain homebrewing recipes uploaded by other users, aswell as get information on various different fermentables/ hops and /yeast
 
-### From the Github UI
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
+## Tech
+* built with node.js / react / scss
+* Sqlite3 database for the beer recipes
+* API form brewerydb for the ingredient information
 
-### From the command line
+## MVP
+* Recipes can be viewed and added
+* Information for all fermentables/ hops / yeast displayed
+* Style with SCSS
 
-```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
-```
-
-You can find the server running on [http://localhost:3000](http://localhost:3000).
-
-## Details
-
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Jest and Enzyme (including JSDOM)
-* configuration for server-side debugging in VS Code
-* a single client-side test (`client/components/App.test.js`)
+## extra features
+* create user profiles and auhentification
+* users can edit their own recipes
+* Brew-kit efficiancy calculator
