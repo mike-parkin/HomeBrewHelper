@@ -4,30 +4,26 @@ import { connect } from 'react-redux'
 import { getHops } from '../apis/hops'
 
 const HopsList = (props) => {
-    const [ hops, setHops ] = useState({})
-
-    const fetchHops = () => {
-        getHops()
-            .then(hops => {
-                console.log(hops)
-                setHops(hops)
-            })
-    }
-
-    useEffect(() => {
-        fetchHops()
-    }, [])
-    
+    const hopsData = props.hops
+     console.log(hopsData)
     return (
         <>
             <h1>List of hops</h1>
             <ul>
-                {/* {hops.data.map(hop => {
-                    <li>{hop.name}</li>
-                })} */}
+                {hopsData.map(hop => {
+                    return(
+                        <li key={hop.id}>{hop.name}</li>
+                    )
+                })}
             </ul>
         </>
     )
 }
 
-export default connect()(HopsList)
+const mapStateToProps = (globalState) => {
+    return {
+        hops: globalState.hops
+    }
+}
+
+export default connect(mapStateToProps)(HopsList)
