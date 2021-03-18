@@ -7,7 +7,7 @@ import HopCard from './HopCard'
 
 const HopsList = (props) => {
     const hopsData = props.hops
-     console.log(hopsData)
+    
     return (
         <>
             <h1>List of hops</h1>

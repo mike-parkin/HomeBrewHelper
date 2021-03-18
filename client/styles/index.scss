@@ -10,12 +10,21 @@ body {
   margin: auto;
 }
 
+.header {
+  background-color: aqua;
+}
+
+.title {
+  text-align: center;
+}
+
 .page-content {
   display: flex;
 }
 
 .nav {
   width: 25%;
+  background-color: #ff8000;
 }
 
 .hop-card {
