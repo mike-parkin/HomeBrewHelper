@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { getHops } from '../apis/hops'
 
+import HopCard from './HopCard'
+
 const HopsList = (props) => {
     const hopsData = props.hops
      console.log(hopsData)
@@ -12,7 +14,9 @@ const HopsList = (props) => {
             <ul>
                 {hopsData.map(hop => {
                     return(
-                        <li key={hop.id}>{hop.name}</li>
+                        <li key={hop.id}>
+                            <HopCard hop={hop} />
+                        </li>
                     )
                 })}
             </ul>
