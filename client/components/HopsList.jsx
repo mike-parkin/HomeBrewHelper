@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 
-import { getHops } from '../apis/hops'
-
 import HopCard from './HopCard'
 
 const HopsList = (props) => {
     const hopsData = props.hops
-    
+
     return (
         <>
             <h1>List of hops</h1>
