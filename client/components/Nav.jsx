@@ -10,7 +10,7 @@ const Nav = () => {
                 <Link to='/beerlist'>Beer Recipes</Link>
             </div>
             <div className='nav-link'>
-                <Link to='/grainslist'>Grains/Fermentables</Link>
+                <Link to='/fermentables'>Grains/Fermentables</Link>
             </div>
             <div className='nav-link'>
                 <Link to='/hopslist'>Hops</Link>

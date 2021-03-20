@@ -3,18 +3,20 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { fetchHops } from '../actions/hops'
+import { fetchFermentables } from '../actions/fermentables'
 
 import Home from './Home'
 import Header from './Header'
 import Nav from './Nav'
 import BeerList from './BeerList'
-import Grainslist from './GrainsList'
+import Fermentables from './Fermentables'
 import HopsList from './HopsList'
 
 const App = (props) => {
 
     useEffect(() => {
         props.dispatch(fetchHops())
+        props.dispatch(fetchFermentables())
     }, [])
 
     return ( 
@@ -25,8 +27,8 @@ const App = (props) => {
                     <Nav />
                     <div className='main-content'>
                         <Route path='/' exact component = { Home } /> 
-                        <Route path='/Beerlist' component = { BeerList } />
-                        <Route path='/grainslist' component = { Grainslist } />
+                        <Route path='/beerlist' component = { BeerList } />
+                        <Route path='/fermentables' component = { Fermentables } />
                         <Route path='/hopslist' component= { HopsList } />
                     </div>
                 </div>
@@ -37,7 +39,8 @@ const App = (props) => {
 
 const mapStateToProps = (globalState) => {
     return {
-        hops: globalState.hops
+        hops: globalState.hops,
+        fermentables: globalState.fermentables
     }
 }
 

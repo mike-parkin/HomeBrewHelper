@@ -1,4 +1,4 @@
-import { SET_FERMENTABLES } from '../actions/fermentables
+import { SET_FERMENTABLES } from '../actions/fermentables'
 
 const initialState = []
 
