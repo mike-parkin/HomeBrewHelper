@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 import { fetchHops } from '../actions/hops'
 import { fetchFermentables } from '../actions/fermentables'
+import { fetchYeast } from '../actions/yeast'
 
 import Home from './Home'
 import Header from './Header'
@@ -18,6 +19,7 @@ const App = (props) => {
     useEffect(() => {
         props.dispatch(fetchHops())
         props.dispatch(fetchFermentables())
+        props.dispatch(fetchYeast())
     }, [])
 
     return ( 
@@ -42,7 +44,8 @@ const App = (props) => {
 const mapStateToProps = (globalState) => {
     return {
         hops: globalState.hops,
-        fermentables: globalState.fermentables
+        fermentables: globalState.fermentables,
+        yeast: globalState.yeast
     }
 }
 
