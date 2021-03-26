@@ -11,6 +11,7 @@ import Nav from './Nav'
 import BeerList from './BeerList'
 import Fermentables from './Fermentables'
 import HopsList from './HopsList'
+import YeastList from './YeastList'
 
 const App = (props) => {
 
@@ -26,10 +27,11 @@ const App = (props) => {
                 <div className = "page-content" >
                     <Nav />
                     <div className='main-content'>
-                        <Route path='/' exact component = { Home } /> 
-                        <Route path='/beerlist' component = { BeerList } />
-                        <Route path='/fermentables' component = { Fermentables } />
-                        <Route path='/hopslist' component= { HopsList } />
+                        <Route path='/' exact component={ Home } /> 
+                        <Route path='/beerlist' component={ BeerList } />
+                        <Route path='/fermentables' component={ Fermentables } />
+                        <Route path='/hopslist' component={ HopsList } />
+                        <Route path='/yeast' component={ YeastList } />
                     </div>
                 </div>
             </Router> 

@@ -15,6 +15,9 @@ const Nav = () => {
             <div className='nav-link'>
                 <Link to='/hopslist'>Hops</Link>
             </div>
+            <div className='nav-link'>
+                <Link to='/yeast'>Yeast</Link>
+            </div>
         </div>
     )
 }

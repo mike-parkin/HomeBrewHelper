@@ -6,8 +6,6 @@ import FermentableCard from './FermentableCard'
 const Fermentables = (props) => {
     const fermData = props.fermentables
 
-    console.log(fermData)
-
     return (
         <>
             <h1>All ya grains and fermentbales</h1>
