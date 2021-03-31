@@ -11,17 +11,21 @@ router.post('/signin', (req, res, next) => {
                 error: error.message || "internal server error"
             })
         }
-        return res.json({
-            message: "user is now authenticated"
-        })
+        return res.json(user)
     })(req, res, next)
 })
 
-router.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/',
-    failureRedirect: '/home',
-    session: false
-}))
+router.post('/signup', (req, res, next) => {
+    passport.authenticate('local-signup', (error, user, info) => {
+        if (error) {
+            return res.status(500).json({
+                message: "Ooops, something happened",
+                error: error.message || "internal server error"
+            })
+        }
+        return res.json(user)
+    })(req, res, next)
+})
 
 
 module.exports = router
