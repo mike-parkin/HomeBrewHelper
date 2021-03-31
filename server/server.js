@@ -10,7 +10,7 @@ const yeastRoutes = require('./routes/yeast')
 const userRoutes = require('./routes/users')
 
 const server = express()
-mongoose.connect('mongodb://localhost/authentification-expample', {useNewUrlParser: true})
+mongoose.connect('mongodb://localhost/authentification-tests', {useNewUrlParser: true})
 
 // middleware
 server.use(express.json())
