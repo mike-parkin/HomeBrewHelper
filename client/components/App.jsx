@@ -17,10 +17,11 @@ import YeastList from './YeastList'
 const App = (props) => {
 
     useEffect(() => {
+        props.dispatch(fetchYeast())
         props.dispatch(fetchHops())
         props.dispatch(fetchFermentables())
-        props.dispatch(fetchYeast())
     }, [])
+
 
     return ( 
         <div className="app" >

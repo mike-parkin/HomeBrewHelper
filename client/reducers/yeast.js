@@ -1,4 +1,4 @@
-import { SET_YEAST } from '../actions/hops'
+import { SET_YEAST } from '../actions/yeast'
 
 const initialState = []
 
