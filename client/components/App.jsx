@@ -25,8 +25,8 @@ const App = (props) => {
 
     return ( 
         <div className="app" >
-            <Header />
             <Router>
+                <Header />
                 <div className = "page-content" >
                     <Nav />
                     <div className='main-content'>
