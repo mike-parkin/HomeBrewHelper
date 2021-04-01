@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import YeastCard from './YeastCard'
+
 const YeastList = (props) => {
     const yeastData = props.yeast
 
@@ -9,7 +11,7 @@ const YeastList = (props) => {
             <h1>I will show you some yeasty goodness</h1>
             {yeastData.map(yeast => {
                 return (
-                    <p>{yeast.name}</p>
+                    <YeastCard yeast={yeast} />
                 )
             })}
         </>

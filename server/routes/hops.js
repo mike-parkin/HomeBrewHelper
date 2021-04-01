@@ -15,6 +15,9 @@ router.get('/', (req, res) => {
         .then(hops => {
             res.json(hops)
         })
+        .catch(err => {
+            console.log('hi', err)
+        })
 })
 
 

@@ -4,6 +4,7 @@ const passport = require('../passport')
 
 
 router.post('/signin', (req, res, next) => {
+    console.log('hi')
     passport.authenticate('local-signin', (error, user, info) => {
         if (error) {
             return res.status(500).json({
