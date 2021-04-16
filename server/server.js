@@ -9,6 +9,7 @@ const hopRoutes = require('./routes/hops')
 const fermentableRoutes = require('./routes/fermentables')
 const yeastRoutes = require('./routes/yeast')
 const userRoutes = require('./routes/users')
+const beerRecipeRoutes = require('./routes/beerRecipes')
 
 const server = express()
 mongoose.connect('mongodb://localhost/authentification-tests', {useNewUrlParser: true})
@@ -24,5 +25,6 @@ server.use('/api/v1/hops', hopRoutes)
 server.use('/api/v1/fermentables', fermentableRoutes)
 server.use('/api/v1/yeast', yeastRoutes)
 server.use('/api/v1/authentication', userRoutes)
+server.use('/api/v1/beerrecipes', beerRecipeRoutes)
 
 module.exports = server

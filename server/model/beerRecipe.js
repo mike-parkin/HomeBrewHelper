@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const beerRecipeSchema = new Schema({
+const BeerRecipeSchema = new Schema({
     beer_name: String,
     abv: Number,
     OG: Number,
@@ -15,4 +15,6 @@ const beerRecipeSchema = new Schema({
     username: String
 })
 
-export const beerRecipeSchema
+const BeerRecipe = mongoose.model('BeerRecipe', BeerRecipeSchema)
+
+module.export = BeerRecipe
