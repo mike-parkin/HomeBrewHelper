@@ -17,7 +17,6 @@ const loginStrategy = new Strategy({
         const isPasswordValid = bcrypt.compareSync(password, user.password)
 
         if (!isPasswordValid) {
-            console.log('invalid pword')
             return done("Email or password is not valid", null)
         }
 
