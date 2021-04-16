@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
         })
 })
 
-router.post
+router.post('/', )
 
 // router.get('/recipe/:id', (req, res) => {
 //     db.getRecipeGrains(req.params.id)
