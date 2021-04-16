@@ -11,19 +11,21 @@ router.get('/', (req, res) => {
         })
 })
 
-router.get('/recipe/:id', (req, res) => {
-    db.getRecipeGrains(req.params.id)
-        .then(recipe => {
-            db.getRecipeHops(recipe)
-                .then(recipe => {
-                    db.getRecipeYeasts(recipe[0])
-                        .then(recipe => {
-                            console.log('hi', recipe[0][0])
-                            res.json(recipe[0][0])
-                        })
-                })
-        })
-})
+router.post
+
+// router.get('/recipe/:id', (req, res) => {
+//     db.getRecipeGrains(req.params.id)
+//         .then(recipe => {
+//             db.getRecipeHops(recipe)
+//                 .then(recipe => {
+//                     db.getRecipeYeasts(recipe[0])
+//                         .then(recipe => {
+//                             console.log('hi', recipe[0][0])
+//                             res.json(recipe[0][0])
+//                         })
+//                 })
+//         })
+// })
 
 
 module.exports = router
